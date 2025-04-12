@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #c3ecf7, #a8edea);
+  color: #2c3e50;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#root {
+  width: 90%;
+  max-width: 600px;
+  padding: 2rem;
+}
+
+.container {
+  padding: 2.5rem;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.container:hover {
+  transform: translateY(-4px);
+}
+
+h1 {
+  font-size: 2.4rem;
+  margin-bottom: 1.8rem;
+  color: #1f2937;
+}
+
+input[type="text"] {
+  padding: 0.9rem 1.2rem;
+  width: 70%;
+  border-radius: 16px;
+  border: none;
+  background: #f1f5f9;
+  box-shadow: inset 3px 3px 6px rgba(0, 0, 0, 0.05),
+              inset -3px -3px 6px rgba(255, 255, 255, 0.6);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  color: #333;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  background: #ffffff;
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.05),
+              inset -2px -2px 5px rgba(255, 255, 255, 0.6);
+}
+
+button {
+  padding: 0.8rem 1.3rem;
+  background: linear-gradient(135deg, #7f7fd5, #86a8e7, #91eae4);
+  color: white;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-left: 0.5rem;
+  box-shadow: 4px 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  transform: translateY(-2px);
+}
+
+.weather-card {
+  margin-top: 2rem;
+  background: rgba(255, 255, 255, 0.35);
+  padding: 1.8rem;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(31, 38, 135, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: transform 0.3s ease;
+}
+
+.weather-card:hover {
+  transform: scale(1.04);
+}
+
+.weather-icon {
+  width: 70px;
+  height: 70px;
+  margin: 1rem auto;
+}
+
+.temp {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #2d3748;
+}
+
+.details {
+  margin-top: 1.2rem;
+  display: flex;
+  justify-content: space-around;
+  font-size: 1rem;
+  color: #555;
+}
+
+.error {
+  margin-top: 1rem;
+  color: #ff5f5f;
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  input[type="text"] {
+    width: 100%;
+    margin-bottom: 0.8rem;
+  }
+
+  button {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 0.5rem;
+  }
+
+  .details {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
